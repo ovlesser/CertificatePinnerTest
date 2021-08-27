@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Trust user added CAs while debuggable only -->
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">wikipedia.org</domain>
+        <pin-set expiration="2022-01-01">
+            <pin digest="SHA-256">ikocd6xWf/wVZnOoeTONMD0v2N8TTr7N1u67gQ+ZxbI=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

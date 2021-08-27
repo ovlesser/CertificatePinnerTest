@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <debug-overrides>
+        <trust-anchors>
+            <!-- Trust user added CAs while debuggable only -->
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- EMULATOR_LOCALHOST = "10.0.2.2"; -->
+        <!-- DEVICE_LOCALHOST = "localhost"; -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">api-psm.g.testservicensw.net</domain>
+<!--        <domain includeSubdomains="true">wikipedia.org</domain>-->
+<!--        <pin-set expiration="2022-01-01">-->
+<!--            <pin digest="SHA-256">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</pin>-->
+<!--        </pin-set>-->
+    </domain-config>
+</network-security-config>
